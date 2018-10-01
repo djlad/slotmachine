@@ -1,0 +1,25 @@
+{
+  "name": "slotmachine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1",
+    "jquery-slotmachine": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djlad/slotmachine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djlad/slotmachine/issues"
+  },
+  "homepage": "https://github.com/djlad/slotmachine#readme"
+}
