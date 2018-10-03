@@ -68,6 +68,7 @@ function genRunMachine(machineSlots, creditsElm){
             let rollScore = evaluateRoll(stopRows);
             if(rollScore > .4){
                 ms.credits += 10;
+                console.log(creditsElm);
                 creditsElm.innerHTML = ms.credits;
             }
         }, 1000);

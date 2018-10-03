@@ -1,0 +1,16 @@
+version: "3"
+services:
+  #db:
+  #  image: postgres:10.5-alpine
+  #  environment:
+  #    POSTGRES_USER: slotuser
+  #    POSTGRES_PASSWORD: thisishowwedo
+  server:
+    restart: always
+    build: slotmachineserver
+    volumes:
+      - ./slotmachineserer:/usr/code
+    stdin_open: true
+    tty: true
+    ports:
+      - "0.0.0.0:8000:8000"
