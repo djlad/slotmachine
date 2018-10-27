@@ -9,8 +9,12 @@ services:
     restart: always
     build: slotmachineserver
     volumes:
-      - ./slotmachineserer:/usr/code
+      - ./slotmachineserver:/code
     stdin_open: true
     tty: true
+    #command: /bin/sh
+    # ^^^ command for development
+    command: /bin/sh start.bat
+    # ^^^ command for running the server
     ports:
       - "0.0.0.0:8000:8000"
