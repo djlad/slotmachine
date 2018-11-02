@@ -1,10 +1,12 @@
 version: "3"
 services:
-  #db:
-  #  image: postgres:10.5-alpine
-  #  environment:
-  #    POSTGRES_USER: slotuser
-  #    POSTGRES_PASSWORD: thisishowwedo
+  db:
+    image: postgres:10.5-alpine
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_USER: slotuser
+      POSTGRES_PASSWORD: thisishowwedo
   server:
     restart: always
     build: slotmachineserver
@@ -16,5 +18,7 @@ services:
     # ^^^ command for development
     command: /bin/sh start.bat
     # ^^^ command for running the server
+    depends_on:
+      - db
     ports:
       - "0.0.0.0:8000:8000"
