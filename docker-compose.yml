@@ -14,9 +14,9 @@ services:
       - ./slotmachineserver:/code
     stdin_open: true
     tty: true
-    command: /bin/sh
+    #command: /bin/sh
     # ^^^ command for development
-    #command: /bin/sh start.bat
+    command: /bin/sh start.bat
     # ^^^ command for running the server
     depends_on:
       - db
