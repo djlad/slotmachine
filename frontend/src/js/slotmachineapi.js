@@ -16,16 +16,15 @@ constructor(){
 // logs the user in by validating credentials, then gens session token
 loginUser(username,password){
     fetch(this.url+"/login",{
-        method: 'POST',
-        body: JSON.stringify(username,password),
-        headers: {
-            'Access-Control-Allow-Origin' : 'true',
-            'Content-Type' : 'application/json'
-        }
+        method: 'GET'
+        // body: JSON.stringify(username,password),
+        // headers: {
+        //     'Content-Type' : 'application/json'
+        // }
     }).then((response) => response.json())
     .then((response) => {
-        console.log(response);
-        CURRENT_TOKEN = response;
+        this.CURRENT_TOKEN = response;
+        console.log(this.CURRENT_TOKEN);
     });
      // res should be a token
 }
@@ -38,8 +37,8 @@ getCredits(){
         headers: {'Content-Type': 'application/json'}
     }).then((res)=> res.json())
     .then((res) => {
-        console.log(res);
         this.CURRENT_CREDITS = res;
+        console.log(this.CURRENT_CREDITS);
     });
      // sets current num of credits 
 }
