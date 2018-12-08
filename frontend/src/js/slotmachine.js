@@ -20,8 +20,13 @@ window.onload = function(){
     runMachine = genRunMachine(ms );
 
     const btn = document.querySelector('#randomizeButton');
-    btn.addEventListener('click', ()=>{runMachine()});
+    btn.addEventListener('click', ()=>{
+        getResults(runMachine);
+        // runMachine();
+    });
 };
+
+
 
 function MachineSlots(machines, creditsElm){
     this._credits = 5;
@@ -67,9 +72,9 @@ function genRunMachine(machineSlots, creditsElm){
             ms.stop(stopRows);
             let rollScore = evaluateRoll(stopRows);
             if(rollScore > .4){
-                ms.credits += 10;
+                //ms.credits += 10;
                 console.log(creditsElm);
-                creditsElm.innerHTML = ms.credits;
+                //creditsElm.innerHTML = ms.credits;
             }
         }, 1000);
     }
