@@ -1,3 +1,4 @@
 django
 PyMySQL
 psycopg2
+django-cors-headers
