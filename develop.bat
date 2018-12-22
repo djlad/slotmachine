@@ -1,1 +1,1 @@
-docker-compose run --rm server
+docker-compose run --rm --service-ports server
